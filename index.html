@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="robots" content="none">
+<link rel="stylesheet" href="https://jaajko.eu/styles.css">
+<title>random cat videos!</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.80, user-scalable=no">
+<link rel="icon" type="image/x-icon" href="https://assets.jaajko.eu/favicon.ico">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100&display=swap');
+</style>
+<style>
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<center>
+<h2 style="color:rgb(255, 0, 0);">random cat videos!</h2>
+<video id="cat" width="480" height="360" autoplay playsinline style="background:black" controls>
+</center>
+<center>
+<p>This website plays a randomly selected cat video everytime you refresh!</p>
+</center>
+<script>
+var vidElement = document.getElementById('cat');
+var vidSources = [
+  "https://assets.jaajko.eu/cats/1.mp4", 
+  "https://assets.jaajko.eu/cats/2.mp4",
+  "https://assets.jaajko.eu/cats/3.mp4"
+  ];
+var activeVideo = Math.floor((Math.random() * vidSources.length));
+vidElement.src = vidSources[activeVideo];
+vidElement.addEventListener('ended', function(e) {
+
+  activeVideo = (++activeVideo) % vidSources.length;
+  if(activeVideo === vidSources.length){
+    activeVideo = 0;
+  }
+
+  vidElement.src = vidSources[activeVideo];
+  vidElement.play();
+});
+</script>
+
+<div class="footer">
+<p>Made with <3 by <a href="https://jaajko.eu">jaajko</a>. <a href="https://jaajko.eu/privacy-policy">Privacy Policy</a></p>
+</div>
+</body>
+</html>
