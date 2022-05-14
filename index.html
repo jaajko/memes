@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="robots" content="none">
 <meta name="copyright" content="jaajko">
-<link rel="stylesheet" href="https://jaajko.eu/styles.css">
+<link rel="stylesheet" href="https://jaajko.eu/main.css">
 <title>jaajko | random memes</title>
 <meta name="viewport" content="width=device-width, initial-scale=0.80, user-scalable=no">
 <link rel="icon" type="image/x-icon" href="https://assets.jaajko.eu/favicon.ico">
@@ -17,9 +17,6 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="jaajko | random memes"/>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100&display=swap');
-</style>
-<style>
 .footer {
 position: fixed;
 left: 0;
@@ -30,14 +27,24 @@ text-align: center;
 </style>
 </head>
 <body>
+<div class="area" >
+<ul class="circles">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
 <center>
-<h2 style="color:rgb(255, 0, 0);">random memes</h2>
+<header id="header">
+<h2 style="color:rgb(255, 0, 0);">random memes</h2><br>
 <video id="meme" width="480" height="360" autoplay playsinline style="background:black" controls>
-</center>
-<center>
-<p>This website plays a randomly selected meme every time you refresh<br>
-memes: 52</p>
-<p>memes probably from discord</p>
 </center>
 <script>
 var vidElement = document.getElementById('meme');
@@ -110,7 +117,7 @@ vidElement.addEventListener('ended', function(e) {
 </script>
 
 <div class="footer">
-<p>This page is <a href="https://github.com/jaajko/memes" target="_blank" rel="noopener">open source</a><br></p>
+<p>memes: 52. This page is <a href="https://github.com/jaajko/memes" target="_blank" rel="noopener">open source</a><br></p>
 </div>
 </body>
 </html>
